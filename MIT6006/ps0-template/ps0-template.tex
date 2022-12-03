@@ -1,0 +1,141 @@
+%
+% 6.006 problem set 0 solutions template
+%
+\documentclass[12pt,twoside]{article}
+
+\input{macros-sp20}
+\newcommand{\theproblemsetnum}{0}
+
+\title{6.006 Problem Set 0}
+
+\begin{document}
+
+\handout{Problem Set \theproblemsetnum}
+
+\setlength{\parindent}{0pt}
+\medskip\hrulefill\medskip
+
+{\bf Name:} LX
+
+\medskip\hrulefill
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% See below for common and useful latex constructs. %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Some useful commands:
+% $f(x) = \Theta(x)$
+% $T(x, y) \leq \log(x) + 2^y + \binom{2n}{n}$
+% \ttt{code\_function}
+
+
+% You can create unnumbered lists as follows:
+% \begin{itemize}
+%     \item First item in a list
+%         \begin{itemize}
+%             \item First item in a list
+%                 \begin{itemize}
+%                     \item First item in a list
+%                     \item Second item in a list
+%                 \end{itemize}
+%             \item Second item in a list
+%         \end{itemize}
+%     \item Second item in a list
+% \end{itemize}
+
+% You can create numbered lists as follows:
+% \begin{enumerate}
+%     \item First item in a list
+%     \item Second item in a list
+%     \item Third item in a list
+% \end{enumerate}
+
+% You can write aligned equations as follows:
+% \begin{align}
+%     \begin{split}
+%         (x+y)^3 &= (x+y)^2(x+y) \\
+%                 &= (x^2+2xy+y^2)(x+y) \\
+%                 &= (x^3+2x^2y+xy^2) + (x^2y+2xy^2+y^3) \\
+%                 &= x^3+3x^2y+3xy^2+y^3
+%     \end{split}
+% \end{align}
+
+% You can create grids/matrices as follows:
+% \begin{align}
+%     A =
+%     \begin{bmatrix}
+%         A_{11} & A_{21} \\
+%         A_{21} & A_{22}
+%     \end{bmatrix}
+% \end{align}
+
+\begin{problems}
+
+\problem  % Problem 1
+
+\begin{problemparts}
+\problempart % Problem 1a
+\{6, 12\}
+\problempart % Problem 1b
+7 % {1, 3, 6, 9, 12, 13, 15}
+\problempart % Problem 1c
+3 % {1, 9, 13}
+\end{problemparts}
+
+\problem  % Problem 2
+
+\begin{problemparts}
+\problempart % Problem 2a
+1.5
+\problempart % Problem 2b
+12.25 % E(X)=1/6+2/6+3/6+4/6+5/6+6/6=21/6=7/2, 7/2 * 7/2
+\problempart % Problem 2c
+\end{problemparts}
+
+\problem  % Problem 3
+
+\begin{problemparts}
+\problempart % Problem 3a
+true % a≡b(mod m) It is equivalent to dividing a and b by m respectively, and the remainder is the same
+\problempart % Problem 3b
+false
+\problempart % Problem 3c
+false
+\end{problemparts}
+
+\problem  % Problem 4
+
+Mathematical induction: 
+
+Base case: $n = 1, 1^{3} = 1 = ({\frac{1(1+1)}{2}})^2.$ 
+
+Suppose\ this\ equation\ holds\ for\ n\ =\ k.
+
+When $n = (k+1), \sum_{i=1}^{k+1}i^{3} =  ({\frac{k(k+1)}{2}})^2 (k+1)^{3} = (\frac{k^{2}}{4} + (k+1))(k+1)^{2} = \frac{(k+2)^{2}}{4}(k+1)^2 = (\frac{(k+1)(k+2)}{2})^{2}$.\ This means that when n = k+1, the equation also holds.
+
+\newpage
+\problem  % Problem 5
+
+Mathematical induction:
+Since the graph G(k+1) can be obtained from the graph G{k} by adding a vertex with degree at most 1, the graph G(k+1) does not contain a circuit too.
+
+\vfill
+\problem  % Problem 6
+Submit your implementation to {\small\url{alg.mit.edu}}.
+
+\begin{lstlisting}
+def count_long_subarray(A):
+    '''
+    Input:  A     | Python Tuple of positive integers
+    Output: count | number of longest increasing subarrays of A
+    '''
+    count = 0
+    ##################
+    # YOUR CODE HERE #
+    ##################
+    return count
+\end{lstlisting}
+
+\end{problems}
+
+\end{document}
